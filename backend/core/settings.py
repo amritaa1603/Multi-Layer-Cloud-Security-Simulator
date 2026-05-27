@@ -76,7 +76,7 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = os.environ.get(
     'CORS_ALLOWED_ORIGINS',
-    'http://localhost:5173'
+    'https://multi-layer-cloud-security-simulator-m4vrhsslb.vercel.app/'
 ).split(',')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
