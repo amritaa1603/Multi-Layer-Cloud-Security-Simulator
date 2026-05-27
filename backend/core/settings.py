@@ -74,10 +74,11 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    'CORS_ALLOWED_ORIGINS',
-    'https://multi-layer-cloud-security-simulator-m4vrhsslb.vercel.app/'
-).split(',')
+CORS_ALLOWED_ORIGINS = [
+    "https://multi-layer-cloud-security-simulator-dmexzy2cv.vercel.app",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
