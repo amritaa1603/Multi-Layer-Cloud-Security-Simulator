@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 // ── API base ─────────────────────────────────────────────────────────────────
-const API = "http://127.0.0.1:8000/api";
-
+const API = "https://multi-layer-cloud-security-simulator-1.onrender.com/api";
 async function apiFetch(path, opts = {}) {
   const token = localStorage.getItem("access");
   const headers = { "Content-Type": "application/json", ...(opts.headers || {}) };
