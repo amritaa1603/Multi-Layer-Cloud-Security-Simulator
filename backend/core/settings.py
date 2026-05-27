@@ -9,7 +9,17 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-change-this-in-produc
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://multi-layer-cloud-security-simulator-5ap6z40kr.vercel.app",
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://multi-layer-cloud-security-simulator-5ap6z40kr.vercel.app",
+]
+
+CORS_ALLOW_CREDENTIALS = True
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -92,13 +102,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # added
 
-CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-]
-CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOWED_ORIGINS = [
-    "https://multi-layer-cloud-security-simulator-dmexzy2cv.vercel.app",
-]
-CORS_ALLOW_CREDENTIALS = True
