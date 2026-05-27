@@ -57,7 +57,14 @@ TEMPLATES = [
         },
     },
 ]
-
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -84,8 +91,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # added
+
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+]
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     "https://multi-layer-cloud-security-simulator-dmexzy2cv.vercel.app",
 ]
+CORS_ALLOW_CREDENTIALS = True
