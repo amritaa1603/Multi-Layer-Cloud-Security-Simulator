@@ -17,18 +17,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'corsheaders',
+
     'rest_framework',
     'rest_framework_simplejwt',
-    'corsheaders',
     'api',
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # added
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -74,13 +79,13 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "https://multi-layer-cloud-security-simulator-dmexzy2cv.vercel.app",
-]
-
-CORS_ALLOW_ALL_ORIGINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # added
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://multi-layer-cloud-security-simulator-dmexzy2cv.vercel.app",
+]
